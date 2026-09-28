@@ -40,9 +40,11 @@ function calculateBalance() {
 }
 
 function updateBalanceColor() {
-  if (calculateBalance() < 0) {
+  let balance = calculateBalance();
+
+  if (balance < 0) {
     balanceColor = "red";
-  } else if (calculateBalance() < calculateTotalExpenses() * 0.25) {
+  } else if (balance < calculateTotalExpenses() * 0.25) {
     balanceColor = "orange";
   } else {
     balanceColor = "green";
